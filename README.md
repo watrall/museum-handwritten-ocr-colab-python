@@ -14,13 +14,12 @@ By the end you will:
 ---
 
 ## Table of Contents
-
-[ What you’ll need ](#what-youll-need)  
-[ Why Python ](#why-python)  
-[ What is a Python Notebook? ](#what-is-a-python-notebook)  
-[ What you’ll learn ](#what-youll-learn)  
-[ Ethics, rights, and responsible handling ](#ethics-rights-and-responsible-handling)  
-[ Meet Google Colab ](#meet-google-colab)  
+*[ What you’ll need ](#what-youll-need)  
+*[ Why Python ](#why-python)  
+*[ What is a Python Notebook? ](#what-is-a-python-notebook)  
+*[ What you’ll learn ](#what-youll-learn)  
+*[ Ethics, rights, and responsible handling ](#ethics-rights-and-responsible-handling)  
+*[ Meet Google Colab ](#meet-google-colab)  
 1. [Install the tools we’ll use](#1-install-the-tools-well-use)  
 2. [Import (load) the libraries](#2-import-load-the-libraries)  
 3. [Upload your scans or PDFs](#3-upload-your-scans-or-pdfs)  
@@ -31,10 +30,10 @@ By the end you will:
 8. [Flag items for human review](#8-flag-items-for-human-review)  
 9. [Clean, standardize, and export](#9-clean-standardize-and-export)  
 10. [Data analysis and insights](#10-data-analysis-and-insights)  
-[ Troubleshooting ](#troubleshooting)  
-[ Contributing to this tutorial ](#contributing-to-this-tutorial)  
-[ License & Citation ](#license--citation)  
-[ Glossary (plain-English definitions) ](#glossary-plainenglish-definitions)
+*[ Troubleshooting ](#troubleshooting)  
+*[ Contributing to this tutorial ](#contributing-to-this-tutorial)  
+*[ License & Citation ](#license--citation)  
+*[ Glossary (plain-English definitions) ](#glossary-plainenglish-definitions)
 
 ---
 
