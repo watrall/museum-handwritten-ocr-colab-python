@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this tutorial, please cite it as below."
+authors:
+  - family-names: Watrall
+    given-names: Ethan
+title: "Handwritten Museum Collections Records OCR and Data Analysis Tutorial"
+version: "1.0.0"
+doi: "10.5281/zenodo.0000000"
+date-released: 2025-09-17
