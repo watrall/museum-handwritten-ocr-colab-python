@@ -35,7 +35,7 @@ By the end you will:
 19. [ License & Citation ](#license--citation)  
 20. [ Glossary (plain-English definitions) ](#glossary-plainenglish-definitions)
 
----
+
 
 ## What you’ll need
 
@@ -43,19 +43,19 @@ Before you start, make sure you have a Google account (for Colab), a stable inte
 
 The best part: you don’t need to install Python or any special software on your computer. Everything runs in your browser.
 
----
+
 
 ## Why Python
 
 Think of Python as a versatile digital toolkit 🛠️ for your research. It's not just a single tool but a collection of specialized gadgets that let us handle many different tasks, from converting documents and analyzing text to creating charts. The best part? It's designed to be readable, almost like plain English, which makes it easier for us to learn and use.
 
----
+
 
 ## What is a Python Notebook?
 
 Imagine a digital lab notebook 🧪 where you can write down your notes, thoughts, and explanations right next to the code you're running. That's a Python notebook. It lets us mix text (like the instructions you're reading now), live code that we can run, and the results from that code (like a clean table or a cool chart). It's a perfect way to tell a story with our data, showing our work step-by-step.
 
----
+
 
 ## What you’ll learn
 
@@ -68,7 +68,7 @@ By the end of this tutorial, you’ll be able to take scans or PDFs of handwritt
 - Export your data into formats like CSV and JSON that can be used in spreadsheets, web applications, or archives.  
 - Carry out basic **data analysis and insights** such as counting object types, looking at collection dates, and spotting gaps in the records.
 
----
+
 
 ## Ethics, rights, and responsible handling
 
@@ -76,7 +76,7 @@ Before we dive in, it’s important to pause and consider the ethics of digitizi
 
 Ask yourself: do I have permission to digitize and analyze this material? Are there privacy concerns? How will I store and share the data? And perhaps most importantly—who benefits from this work? Being clear about these issues from the start is just as important as learning the technical steps.
 
----
+
 
 ## Meet Google Colab
 
@@ -92,7 +92,7 @@ print("Colab runtime ready. Run cells with Shift+Enter.")
 
 Press **Shift+Enter** and you should see the message appear. If it does, your environment is ready to go.
 
----
+
 
 ## 1. Install the tools we’ll use
 
@@ -119,7 +119,7 @@ No single library does all steps reliably. This is a toolkit: each tool is speci
 print("Install complete.")
 ```
 
----
+
 
 ## 2. Import (load) the libraries
 
@@ -142,7 +142,7 @@ from transformers import pipeline
 print("Libraries imported.")
 ```
 
----
+
 
 ## 3. Upload your scans or PDFs
 
@@ -158,7 +158,7 @@ list(uploaded.keys())
 
 > Tip: Click the **folder icon** on the left side of Colab to browse files you’ve uploaded.
 
----
+
 
 ## 4. Convert PDFs to images
 
@@ -189,7 +189,7 @@ image_paths = pdfs_to_images(list(uploaded.keys()), dpi=300)
 print("Images ready:", image_paths[:10], "... total:", len(image_paths))
 ```
 
----
+
 
 ## 5. Preprocess (lightly clean up) the images
 
@@ -224,7 +224,7 @@ if proc_paths:
 
 > If the result looks over-processed (haloing or artifacts), reduce sharpening or skip it.
 
----
+
 
 ## 6. Run OCR two ways: EasyOCR and TrOCR
 
@@ -279,7 +279,7 @@ trocr_results = {p: trocr_page(p) for p in proc_paths}
 print((trocr_results[sample_img] or "")[:400] if sample_img else "No images")
 ```
 
----
+
 
 ## 7. Turn raw text into fields
 
@@ -341,7 +341,7 @@ df.head()
 
 > **Tip:** If your headings are different (e.g., “Specimen No.”), adjust `FIELD_PATTERNS` to match your exact forms.
 
----
+
 
 ## 8. Flag items for human review
 
@@ -366,7 +366,7 @@ review_df.to_csv("records_review_queue.csv", index=False)
 "Created records_review_queue.csv"
 ```
 
----
+
 
 ## 9. Clean, standardize, and export
 
@@ -405,7 +405,7 @@ df.to_json("museum_handwritten_records.json", orient="records", indent=2, force_
 > df.to_csv('/content/drive/MyDrive/museum_handwritten_records.csv', index=False)
 > ```
 
----
+
 
 ## 10. Data analysis and insights
 
@@ -519,7 +519,7 @@ plt.xlabel("Missing count"); plt.tight_layout(); plt.show()
 
 > **Narrative tip:** Combine these views into a clear story (e.g., “Most cataloged items are ceramic vessels (materials), concentrated in 1950–1970 (years), with sparse provenance detail (missing data).”).
 
----
+
 
 ## Troubleshooting
 
@@ -540,7 +540,7 @@ Things don’t always go smoothly, especially when working with OCR and scanned 
 - **Slow runtime**  
   In Colab, switch to GPU: **Runtime → Change runtime type → Hardware accelerator → GPU**. Then re-run the import step. TrOCR especially benefits from GPU acceleration.  
 
----
+
 
 ## Contributing to this tutorial
 
@@ -552,7 +552,7 @@ We welcome improvements. If you want to tweak the tutorial, fix bugs, or add exa
 4. **Commit and push** to your fork.  
 5. Open a **Pull Request** back to this repo—explain what changed and why.  
 
----
+
 
 ## License & Citation
 
@@ -561,9 +561,9 @@ We welcome improvements. If you want to tweak the tutorial, fix bugs, or add exa
 
 If you use or adapt this tutorial, please **cite the repository**. Include the provided `CITATION.cff` so GitHub can generate APA/BibTeX automatically (look for **“Cite this repository”** on the repo page).  
 
----
 
-## Glossary (plain-English definitions)
+
+## Beginner Friendly Glossary
 
 - **Notebook:** An interactive document with text, code cells, and outputs.  
 - **Cell:** A single block you run; it shows results underneath.  
@@ -577,11 +577,3 @@ If you use or adapt this tutorial, please **cite the repository**. Include the p
 - **CSV / JSON:** Common file formats for tabular and structured data.  
 - **DPI:** Dots per inch—image resolution.  
 - **GPU:** Graphics processor; speeds up some models (optional in Colab).  
-
----
-
-### Why we sometimes use **two** tools or formats (quick recap)
-- **Poppler + pdf2image:** Engine + Python bridge for PDF→image (**Step 4**).  
-- **EasyOCR + TrOCR:** Speed & confidence + handwriting accuracy (**Step 6**).  
-- **CSV + JSON:** Spreadsheet workflows + web/app workflows (**Step 9**).  
-- **Multiple analyses:** Frequency, time, provenance, missingness (**Step 10**) give different lenses on the same data.
