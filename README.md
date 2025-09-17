@@ -1,6 +1,6 @@
 # Handwritten Museum Collections Records — OCR → Structured Data → Data Analysis and Insights (Python & Google Colab)
 
-This tutorial shows you how to convert *handwritten museum collection records* (scans or PDFs) into structured data and then carry out **data analysis and insights**. It is designed for **scholars, museum professionals, graduate students, and advanced undergraduates**. You do **not** need prior coding experience. We proceed carefully and conversationally.
+This tutorial shows you how to convert *handwritten museum collection records* (scans or PDFs) into structured data and then carry out **data analysis and insights**. It is designed for **scholars, museum professionals, graduate students, and advanced undergraduates**. You do **not** need prior coding experience. 
 
 By the end you will:
 - Run a notebook in Google Colab (in your browser—no local installs).
